@@ -1,6 +1,6 @@
 <template>
-  <header>
-    header
+  <header class="text-center p-2 mb-3">
+    <h1>Yu-gi-oh Pro Deck</h1>
   </header>
 </template>
 

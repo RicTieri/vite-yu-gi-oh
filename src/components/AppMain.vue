@@ -1,9 +1,11 @@
 <template>
-  <main class="container">
-    <div class="row">
-      <SingleCard v-for="card in store.cards"
-      :card="card"      
-      />
+  <main class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <SingleCard v-for="card in store.cards"
+        :card="card"      
+        />
+      </div>
     </div>
   </main>
 </template>
@@ -25,5 +27,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use '../style/partial/variables' as *;
+
+main{
+  background-color: $bg-primary;
+
+  .container{
+    background-color: white;
+  }
+}
 
 </style>

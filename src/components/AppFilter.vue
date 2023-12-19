@@ -1,18 +1,22 @@
 <template>
   <div class="container-fluid text-center pt-5">
-    <select name="search" id="search" class="fs-5 rounded-3 p-1">
-      <option v-for="card in cardType" :value="card.archetype_name" @click="$choice(card.archetype_name)">{{ card.archetype_name }}</option>
+    <select name="search" id="search" class="fs-5 rounded-3 p-1" v-model="selectedValue" @change="$emit('choice', selectedValue)">
+      <option :value="null">All</option>
+      <option v-for="card in cardType" :value="card.archetype_name">{{ card.archetype_name }}</option>
     </select>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+
+
 export default {
 
   data() {
     return {
-      cardType:[]
+      cardType:[],
+      selectedValue: null
     }
   },
   created() {

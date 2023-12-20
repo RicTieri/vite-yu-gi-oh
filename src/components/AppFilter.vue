@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid text-center pt-5">
+  <div class="container-fluid text-center py-3">
     <select name="search" id="search" class="fs-5 rounded-3 p-1" v-model="selectedValue" @change="$emit('choice', selectedValue)">
       <option :value="null">All</option>
       <option v-for="card in cardType" :value="card.archetype_name">{{ card.archetype_name }}</option>

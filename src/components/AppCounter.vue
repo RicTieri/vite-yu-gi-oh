@@ -1,7 +1,7 @@
 <template >
   <div class="wrapper">
     <div class="container fs-4 fw-medium">
-      Result: {{ count }}
+      Result : {{ count }}
     </div>
   </div>
 </template>
@@ -19,5 +19,9 @@ export default {
   .wrapper{
     background-color: $bg-primary;
     color: white;
+    .container{
+      background-color: black;
+      padding: 1rem;
+    }
   }
 </style>
